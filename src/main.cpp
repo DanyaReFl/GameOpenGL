@@ -2,8 +2,8 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 
-int g_windowSizeX = 800;
-int g_windowSizeY = 600;
+int g_windowSizeX = 1024;
+int g_windowSizeY = 800;
 
 void glfwWindowSizeCallback(GLFWwindow* pwindow, int width, int height)
 {
@@ -56,14 +56,15 @@ int main(void)
     std::cout << "OpenGL version :" <<glGetString(GL_VERSION)<< std::endl;
 
 	
-	glClearColor(1 ,1 ,0 ,1);
+	
 
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(pwindow))
     {
         /* Render here */
-        glClear(GL_COLOR_BUFFER_BIT);
+        glClearColor(0, 0, 0, 1);
 
+        glClear(GL_COLOR_BUFFER_BIT);
         /* Swap front and back buffers */
         glfwSwapBuffers(pwindow);
 
